@@ -11,10 +11,10 @@ class NaiveBayes(metaclass=Singleton):
 
     def __init__(self) -> None:
         
-        with open('/Users/kakeng/dev/projects/open-source/hamorspam/app/classifiers/vectorizer.pkl', 'rb') as file:
+        with open('/Users/kakeng/dev/projects/open-source/spam-or-ham/app/classifiers/naive_bayes/vectorizer.pkl', 'rb') as file:
             self.vectorizer = pickle.load(file)
 
-        with open('/Users/kakeng/dev/projects/open-source/hamorspam/app/classifiers/classifier.pkl', 'rb') as file:
+        with open('/Users/kakeng/dev/projects/open-source/spam-or-ham/app/classifiers/naive_bayes/classifier.pkl', 'rb') as file:
             self.classifier = pickle.load(file)
 
         # s3 = boto3.client(
